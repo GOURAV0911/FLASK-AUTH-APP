@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="text-center">Register</h1>
+
+<form method="POST">
+  <div class="mb-3">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" value="{{ name|default('') }}">
+  </div>
+
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" value="{{ email|default('') }}">
+  </div>
+
+  <div class="mb-3">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+{% endblock body %}
